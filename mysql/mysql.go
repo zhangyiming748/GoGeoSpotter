@@ -18,8 +18,14 @@ func SetMysql() {
 	user := "root"
 	password := "163453"
 	host := os.Getenv("MYSQL_HOST")
+	if host == "" {
+		host = "192.168.1.9"
+	}
 	//host := "192.168.1.9"
 	port := os.Getenv("MYSQL_PORT")
+	if port == "" {
+		port = "3306"
+	}
 	//port := "3306"
 	dbName := "amap"
 	charset := "utf8"
@@ -29,7 +35,7 @@ func SetMysql() {
 		useMysql = false
 	} else {
 		useMysql = true
-		log.Printf("连接数据库成功:%v\n", engine)
+		log.Printf("连接数据库成功:%+v\n", engine)
 	}
 }
 

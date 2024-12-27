@@ -2,7 +2,6 @@ package util
 
 import (
 	"bufio"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -12,8 +11,7 @@ func ReadByLine(fp string) []string {
 	lines := []string{}
 	fi, err := os.Open(fp)
 	if err != nil {
-		fmt.Printf("Error: %s\n", err)
-		log.Println("按行读文件出错")
+		log.Printf("按行读文件%v出错%v\n", fp, err)
 		return []string{}
 	}
 	defer fi.Close()

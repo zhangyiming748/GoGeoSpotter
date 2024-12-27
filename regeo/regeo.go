@@ -17,35 +17,6 @@ var HOST string = "https://restapi.amap.com/v3/geocode/regeo"
 type Rep struct {
 	Status    string `json:"status"`
 	Regeocode struct {
-		AddressComponent struct {
-			City         []interface{} `json:"city"`     // 城市
-			Province     string        `json:"province"` // 省
-			Adcode       string        `json:"adcode"`   // 行政区编码
-			District     string        `json:"district"` // 坐标点所在区
-			Towncode     string        `json:"towncode"` // 乡镇街道编码
-			StreetNumber struct {      // 门牌信息列表
-				Number    []interface{} `json:"number"` // 门牌号
-				Direction []interface{} `json:"direction"`
-				Distance  []interface{} `json:"distance"`
-				Street    []interface{} `json:"street"` // 街道名称
-			} `json:"streetNumber"`
-			Country       string `json:"country"`  // 国家
-			Township      string `json:"township"` // 坐标点所在乡镇/街道（此街道为社区街道，不是道路信息）
-			BusinessAreas []struct {
-				Location string `json:"location"`
-				Name     string `json:"name"`
-				Id       string `json:"id"`
-			} `json:"businessAreas"`
-			Building struct { // 楼信息列表
-				Name string `json:"name"` // 建筑名称
-				Type string `json:"type"` // 类型
-			} `json:"building"`
-			Neighborhood struct { // 社区信息列表
-				Name []interface{} `json:"name"` // 社区名称
-				Type []interface{} `json:"type"` // POI 类型
-			} `json:"neighborhood"`
-			Citycode string `json:"citycode"` // 城市编码
-		} `json:"addressComponent"`
 		FormattedAddress string `json:"formatted_address"`
 	} `json:"regeocode"`
 	Info     string `json:"info"`
@@ -58,6 +29,7 @@ type One struct {
 }
 
 func GetAddrFromGEO(key, location, extensions string) (*One, error) {
+	log.Printf("请求1")
 	g := new(model.Geo)
 	o := new(One)
 	headers := map[string]string{
@@ -77,7 +49,8 @@ func GetAddrFromGEO(key, location, extensions string) (*One, error) {
 		}
 	}
 	location = strings.Join([]string{e, n}, ",")
-	fmt.Printf("location:%s\n", location)
+	//fmt.Printf("location:%s\n", location)
+	location = strings.Replace(location, ".,", "", -1)
 	radius := os.Getenv("RADIUS")
 	if radius == "" {
 		radius = "100"
@@ -90,12 +63,12 @@ func GetAddrFromGEO(key, location, extensions string) (*One, error) {
 		"radius":     radius,     // 搜索半径 radius 取值范围：0~3000，默认值：1000。单位：米
 	}
 	b, err := util.HttpGet(headers, params, HOST)
+	log.Printf("请求2:%v\n", string(b))
 	if err != nil {
-		fmt.Println(err)
 		return nil, err
 	}
-	//f, _ := os.OpenFile("example.json", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
-	//f.Write(b)
+	f, _ := os.OpenFile("example.json", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	f.Write(b)
 	var p Rep
 	err = json.Unmarshal(b, &p)
 	if err != nil {

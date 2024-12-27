@@ -4,6 +4,7 @@ go 1.23.4
 
 require (
 	github.com/go-sql-driver/mysql v1.8.1
+	github.com/h2non/filetype v1.1.3
 	xorm.io/xorm v1.3.9
 )
 
