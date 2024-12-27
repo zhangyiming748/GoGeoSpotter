@@ -46,7 +46,6 @@ func main() {
 	}
 	var locations []string
 	if isExistDir(dcim) {
-		// todo 图片流程
 		pics := ocr.Pictures(dcim)
 		log.Printf("符合条件的图片文件:%v\n", pics)
 		host := "http://127.0.0.1:8080/file"
@@ -61,9 +60,7 @@ func main() {
 	} else {
 		locations = util.ReadByLine(txt)
 	}
-
 	log.Printf("locations:%v\n", locations)
-
 	for _, location := range locations {
 		geo, err := regeo.GetAddrFromGEO(key, location, extensions)
 		if err != nil {
