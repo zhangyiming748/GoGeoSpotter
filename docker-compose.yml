@@ -9,5 +9,5 @@ services:
             - MYSQL_HOST=192.168.1.9
             - MYSQL_PORT=3306
         volumes:
-            - ./data:/data
+            - ./data:/data # coordinates.txt must inside
         image: amap:latest
