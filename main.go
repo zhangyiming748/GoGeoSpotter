@@ -17,6 +17,7 @@ func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	mysql.SetMysql()
 }
+
 func main() {
 	mysql.GetMysql().Sync(model.Geo{})
 	key := os.Getenv("KEY")
@@ -36,7 +37,7 @@ func main() {
 		md = "coordinates.md"
 	}
 	results := []string{
-		"|经度|纬度|地址|",
+		"|纬度|纬度经度|地址|",
 		"|:---:|:---:|:---:|",
 	}
 	dcim := "/data/dcim"
