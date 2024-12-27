@@ -1,0 +1,44 @@
+{
+  "status": "1",
+  "regeocode": {
+    "addressComponent": {
+      "city": [],
+      "province": "北京市",
+      "adcode": "110101",
+      "district": "东城区",
+      "towncode": "110101010000",
+      "streetNumber": {
+        "number": [],
+        "direction": [],
+        "distance": [],
+        "street": []
+      },
+      "country": "中国",
+      "township": "和平里街道",
+      "businessAreas": [
+        {
+          "location": "116.421256,39.959266",
+          "name": "和平里",
+          "id": "110101"
+        },
+        {
+          "location": "116.406629,39.959114",
+          "name": "安定门",
+          "id": "110101"
+        }
+      ],
+      "building": {
+        "name": "地坛公园",
+        "type": "风景名胜;公园广场;公园"
+      },
+      "neighborhood": {
+        "name": [],
+        "type": []
+      },
+      "citycode": "010"
+    },
+    "formatted_address": "北京市东城区和平里街道地坛公园"
+  },
+  "info": "OK",
+  "infocode": "10000"
+}

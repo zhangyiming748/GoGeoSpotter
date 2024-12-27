@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+.vscode
+/coordinates.md
+/coordinates.txt
+/regeo/example.json

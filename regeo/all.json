@@ -1,0 +1,133 @@
+{
+  "status": "1",
+  "regeocode": {
+    "roads": [
+      {
+        "id": "010J50F001020796224",
+        "location": "116.411,39.9534",
+        "direction": "南",
+        "name": "广厚街",
+        "distance": "11.2367"
+      }
+    ],
+    "roadinters": [],
+    "formatted_address": "北京市东城区和平里街道地坛公园",
+    "addressComponent": {
+      "city": [],
+      "province": "北京市",
+      "adcode": "110101",
+      "district": "东城区",
+      "towncode": "110101010000",
+      "streetNumber": {
+        "number": [],
+        "direction": [],
+        "distance": [],
+        "street": []
+      },
+      "country": "中国",
+      "township": "和平里街道",
+      "businessAreas": [
+        {
+          "location": "116.421256,39.959266",
+          "name": "和平里",
+          "id": "110101"
+        },
+        {
+          "location": "116.406629,39.959114",
+          "name": "安定门",
+          "id": "110101"
+        }
+      ],
+      "building": {
+        "name": "地坛公园",
+        "type": "风景名胜;公园广场;公园"
+      },
+      "neighborhood": {
+        "name": [],
+        "type": []
+      },
+      "citycode": "010"
+    },
+    "aois": [
+      {
+        "area": "312867.487476",
+        "type": "110101",
+        "id": "B000A81FMM",
+        "location": "116.414449,39.953778",
+        "adcode": "110101",
+        "name": "地坛公园",
+        "distance": "0"
+      },
+      {
+        "area": "11960.739922",
+        "type": "120100",
+        "id": "B0FFFOKM97",
+        "location": "116.410241,39.952617",
+        "adcode": "110101",
+        "name": "安定门外东后巷28号",
+        "distance": "30.2909"
+      },
+      {
+        "area": "47871.400811",
+        "type": "080101",
+        "id": "B000A55089",
+        "location": "116.409741,39.955464",
+        "adcode": "110101",
+        "name": "北京地坛体育中心",
+        "distance": "49.2652"
+      }
+    ],
+    "pois": [
+      {
+        "id": "B000A81FMM",
+        "direction": "东",
+        "businessarea": "和平里",
+        "address": "安定门外大街",
+        "poiweight": "0.699077",
+        "name": "地坛公园",
+        "location": "116.414449,39.953778",
+        "distance": "332.366",
+        "tel": "010-64214657;010-84257506",
+        "type": "风景名胜;公园广场;公园"
+      },
+      {
+        "id": "B0FFFOKM97",
+        "direction": "西南",
+        "businessarea": "和平里",
+        "address": "安定门地铁站B东北口步行490米",
+        "poiweight": "0.17186",
+        "name": "安定门外东后巷28号",
+        "location": "116.410241,39.952617",
+        "distance": "81.8852",
+        "tel": [],
+        "type": "商务住宅;产业园区;产业园区"
+      },
+      {
+        "id": "B000A8X5CQ",
+        "direction": "西北",
+        "businessarea": "和平里",
+        "address": "安定门外大街168号",
+        "poiweight": "0.145903",
+        "name": "北京市东城区体育运动学校",
+        "location": "116.410017,39.953734",
+        "distance": "69.2682",
+        "tel": "18600532277",
+        "type": "科教文化服务;学校;职业技术学校"
+      },
+      {
+        "id": "B000A8XC8Q",
+        "direction": "西北",
+        "businessarea": "和平里",
+        "address": "和平里街道安定门外大街168号北京地坛体育中心",
+        "poiweight": "0.305849",
+        "name": "北京地坛体育中心(南门)",
+        "location": "116.410119,39.953773",
+        "distance": "66.7012",
+        "tel": [],
+        "type": "通行设施;临街院门;临街院门"
+      }
+    ]
+  },
+  "info": "OK",
+  "infocode": "10000"
+}

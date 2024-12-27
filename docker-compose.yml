@@ -1,0 +1,13 @@
+name: amap
+services:
+    golang:
+        container_name: geo
+        environment:
+            - RADIUS=100 # Search radius range: 0~3000, default value: 1000. Unit: meter.
+            - EXTENSIONS=base # The default value of the extensions parameter is base, which means that basic address information will be returned; when the value of the extensions parameter is all, basic address information, nearby POI content, road information, and road intersection information will be returned.
+            - KEY=xxxx xxxx xxx xxxx xxxx xxxx xxxx # The user applies for a Web service API type Key on the official website of AutoNavi Map.
+            - MYSQL_HOST=192.168.1.9
+            - MYSQL_PORT=3306
+        volumes:
+            - ./data:/data
+        image: amap:latest
